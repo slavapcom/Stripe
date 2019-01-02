@@ -11,6 +11,7 @@ use Payum\Stripe\Action\Api\CreatePlanAction;
 use Payum\Stripe\Action\Api\CreateSubscriptionAction;
 use Payum\Stripe\Action\Api\CreateTokenAction;
 use Payum\Stripe\Action\Api\ObtainTokenAction;
+use Payum\Stripe\Action\Api\SyncSubscriptionAction;
 use Payum\Stripe\Action\CaptureAction;
 use Payum\Stripe\Action\ConvertPaymentAction;
 use Payum\Stripe\Action\GetCreditCardTokenAction;
@@ -48,6 +49,7 @@ class StripeCheckoutGatewayFactory extends GatewayFactory
             'payum.action.create_token' => new CreateTokenAction(),
             'payum.action.create_subscription' => new CreateSubscriptionAction(),
             'payum.action.cancel_subscription' => new CancelSubscriptionAction(),
+            'payum.action.sync' => new SyncSubscriptionAction(),
 
             'payum.extension.create_customer' => new CreateCustomerExtension(),
         ]);
