@@ -4,6 +4,7 @@ namespace Payum\Stripe;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\LogicException;
 use Payum\Core\GatewayFactory;
+use Payum\Stripe\Action\Api\CancelSubscriptionAction;
 use Payum\Stripe\Action\Api\CreateChargeAction;
 use Payum\Stripe\Action\Api\CreateCustomerAction;
 use Payum\Stripe\Action\Api\CreatePlanAction;
@@ -46,6 +47,7 @@ class StripeCheckoutGatewayFactory extends GatewayFactory
             'payum.action.create_plan' => new CreatePlanAction(),
             'payum.action.create_token' => new CreateTokenAction(),
             'payum.action.create_subscription' => new CreateSubscriptionAction(),
+            'payum.action.cancel_subscription' => new CancelSubscriptionAction(),
 
             'payum.extension.create_customer' => new CreateCustomerExtension(),
         ]);
